@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oleksii Shamanov - Senior Full-Stack Engineer",
+  title: "David Partida - Senior Full-Stack Engineer",
   description: "Senior Full-Stack Engineer specializing in Python, .NET, Node.js, Angular, and React. Building scalable, secure, and high-performance web and enterprise applications.",
 };
 

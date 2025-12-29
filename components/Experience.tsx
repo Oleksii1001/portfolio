@@ -24,7 +24,7 @@ export default function Experience() {
       id: "1",
       company: "Railsware",
       position: "Senior Full-Stack Developer",
-      location: "Kyiv, Ukraine",
+      location: "Arizona, USA",
       startDate: "Jan 2022",
       endDate: "Present",
       description: [
@@ -40,7 +40,7 @@ export default function Experience() {
       id: "2",
       company: "Edvantis",
       position: "Front-End Developer / Full-Stack Engineer",
-      location: "Lviv, Ukraine",
+      location: "Arizona, USA",
       startDate: "Oct 2020",
       endDate: "Dec 2023",
       description: [

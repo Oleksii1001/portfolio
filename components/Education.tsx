@@ -22,10 +22,10 @@ export default function Education() {
   const education: EducationItem[] = [
     {
       id: "1",
-      institution: "Kyiv National University of Technologies and Design",
+      institution: "Central Arizona College",
       degree: "Bachelor of Computer Science",
       field: "Software Engineering and Web Development",
-      location: "Kyiv, Ukraine",
+      location: "Arizona, United State",
       startYear: "2016",
       endYear: "2020",
       description: [

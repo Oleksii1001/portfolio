@@ -49,7 +49,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <h3 className="text-xl font-bold font-display text-primary mb-4">
-                Oleksii Shamanov
+                David Partida
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
                 Senior Full-Stack Engineer specializing in Python, .NET, Node.js, Angular, and React. 
@@ -115,7 +115,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Get In Touch</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>📧 oleksii.shamanov2@gmail.com</p>
-                <p>📍 Kyiv, Ukraine</p>
+                <p>📍 Arizona, USA</p>
                 <p className="mt-4">
                   Available for full-stack development projects.
                 </p>
@@ -135,7 +135,7 @@ export default function Footer() {
           className="flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>© {currentYear} Oleksii Shamanov. Made with</span>
+            <span>© {currentYear} David Partida. Made with</span>
             <Heart className="h-4 w-4 text-red-500 fill-current" />
             <span>and lots of coffee.</span>
           </div>

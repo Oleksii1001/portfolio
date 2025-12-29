@@ -76,7 +76,7 @@ export default function Hero() {
             >
               Hi, I'm{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80">
-                Oleksii Shamanov
+                David Partida
               </span>
             </motion.h1>
             
@@ -174,7 +174,7 @@ export default function Hero() {
               >
                 <Image
                   src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=600&h=600&fit=crop"
-                  alt="Oleksii Shamanov - Senior Full-Stack Engineer"
+                  alt="David Partida - Senior Full-Stack Engineer"
                   fill
                   sizes="(max-width: 768px) 320px, 384px"
                   className="object-cover"

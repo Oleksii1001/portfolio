@@ -92,7 +92,7 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "Location",
-      value: "Kyiv, Ukraine",
+      value: "Arizona, USA",
       action: () => {}
     },
   ];
