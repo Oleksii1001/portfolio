@@ -32,13 +32,12 @@ export default function Skills() {
       icon: Code2,
       skills: [
         { name: "Angular", level: 95, category: "frontend" },
-        { name: "React.js", level: 92, category: "frontend" },
-        { name: "Vue.js", level: 88, category: "frontend" },
-        { name: "Next.js", level: 90, category: "frontend" },
-        { name: "Nuxt.js", level: 85, category: "frontend" },
+        { name: "React", level: 90, category: "frontend" },
         { name: "TypeScript", level: 93, category: "frontend" },
-        { name: "JavaScript", level: 95, category: "frontend" },
-        { name: "HTML5/CSS3", level: 95, category: "frontend" },
+        { name: "JavaScript (ES6+)", level: 92, category: "frontend" },
+        { name: "HTML5 / CSS3", level: 90, category: "frontend" },
+        { name: "RxJS", level: 88, category: "frontend" },
+        { name: "NgRx", level: 85, category: "frontend" },
       ],
     },
     {
@@ -46,15 +45,14 @@ export default function Skills() {
       label: "Backend & APIs",
       icon: Server,
       skills: [
-        { name: "Python", level: 95, category: "backend" },
-        { name: "Django", level: 93, category: "backend" },
-        { name: ".NET / C#", level: 92, category: "backend" },
-        { name: "Node.js", level: 90, category: "backend" },
-        { name: "Express.js", level: 88, category: "backend" },
-        { name: "NestJS", level: 87, category: "backend" },
-        { name: "Laravel / PHP", level: 85, category: "backend" },
-        { name: "REST APIs", level: 95, category: "backend" },
-        { name: "GraphQL", level: 88, category: "backend" },
+        { name: ".NET Core / .NET 7+", level: 95, category: "backend" },
+        { name: "C#", level: 95, category: "backend" },
+        { name: "Python", level: 92, category: "backend" },
+        { name: "Django", level: 90, category: "backend" },
+        { name: "Node.js", level: 88, category: "backend" },
+        { name: "RESTful APIs", level: 95, category: "backend" },
+        { name: "WebSockets / SignalR", level: 90, category: "backend" },
+        { name: "JWT / OAuth 2.0", level: 88, category: "backend" },
       ],
     },
     {
@@ -62,11 +60,11 @@ export default function Skills() {
       label: "Databases",
       icon: Database,
       skills: [
-        { name: "PostgreSQL", level: 93, category: "database" },
-        { name: "MySQL", level: 92, category: "database" },
-        { name: "MongoDB", level: 90, category: "database" },
-        { name: "SQL Server", level: 88, category: "database" },
-        { name: "MariaDB", level: 87, category: "database" },
+        { name: "SQL Server", level: 92, category: "database" },
+        { name: "PostgreSQL", level: 90, category: "database" },
+        { name: "Entity Framework", level: 90, category: "database" },
+        { name: "Django ORM", level: 88, category: "database" },
+        { name: "Redis (Caching)", level: 85, category: "database" },
       ],
     },
     {
@@ -74,12 +72,13 @@ export default function Skills() {
       label: "Cloud & DevOps",
       icon: Cloud,
       skills: [
-        { name: "AWS", level: 90, category: "cloud" },
-        { name: "Azure", level: 88, category: "cloud" },
-        { name: "GCP", level: 85, category: "cloud" },
+        { name: "Microsoft Azure", level: 93, category: "cloud" },
         { name: "Docker", level: 92, category: "cloud" },
-        { name: "CI/CD", level: 90, category: "cloud" },
+        { name: "GitHub Actions", level: 90, category: "cloud" },
+        { name: "CI/CD Pipelines", level: 90, category: "cloud" },
+        { name: "Infrastructure as Code (IaC)", level: 85, category: "cloud" },
         { name: "Git", level: 95, category: "cloud" },
+        { name: "Azure DevOps", level: 87, category: "cloud" },
       ],
     },
   ];
@@ -113,7 +112,7 @@ export default function Skills() {
             Skills & Expertise
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Technical expertise and programming skills for building scalable, high-performance web applications.
+            Full-stack expertise with deep specialization in Angular, .NET, and Azure cloud solutions.
           </p>
         </motion.div>
 
@@ -202,26 +201,26 @@ export default function Skills() {
             <CardHeader>
               <CardTitle className="text-center font-display">
                 <Users className="inline-block mr-2 h-5 w-5" />
-                Additional Expertise
+                Professional Impact
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">7+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-2xl font-bold text-primary mb-1">10+ Years</div>
+                  <div className="text-sm text-muted-foreground">Full-Stack Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">50+</div>
-                  <div className="text-sm text-muted-foreground">Projects Delivered</div>
+                  <div className="text-2xl font-bold text-primary mb-1">4</div>
+                  <div className="text-sm text-muted-foreground">Enterprise Companies</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">25+</div>
-                  <div className="text-sm text-muted-foreground">Technologies</div>
+                  <div className="text-2xl font-bold text-primary mb-1">60%</div>
+                  <div className="text-sm text-muted-foreground">Latency Reduction</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary mb-1">100%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+                  <div className="text-2xl font-bold text-primary mb-1">$25%</div>
+                  <div className="text-sm text-muted-foreground">Cloud Cost Savings</div>
                 </div>
               </div>
             </CardContent>

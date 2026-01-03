@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/lib/hooks/use-toast";
-import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -50,12 +50,12 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // Direct email integration - opens user's email client with pre-filled data
+      // Open user's default email client with pre-filled message
       const subject = encodeURIComponent(data.subject);
       const body = encodeURIComponent(
         `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
       );
-      const emailUrl = `mailto:oleksii.shamanov2@gmail.com?subject=${subject}&body=${body}`;
+      const emailUrl = `mailto:nellebrowns0413@gmail.com?subject=${subject}&body=${body}`;
       
       window.open(emailUrl, '_blank');
       
@@ -64,12 +64,12 @@ export default function Contact() {
       
       toast({
         title: "Email client opened!",
-        description: "Your message has been prepared in your email client. Please send it to complete the contact.",
+        description: "Your message has been prepared. Please send it to complete your inquiry.",
       });
     } catch (error) {
       toast({
         title: "Unable to open email client",
-        description: "Please contact me directly at oleksii.shamanov2@gmail.com",
+        description: "Please contact me directly at nellebrowns0413@gmail.com",
         variant: "destructive",
       });
     } finally {
@@ -86,13 +86,13 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "oleksii.shamanov2@gmail.com",
-      action: () => window.open("mailto:oleksii.shamanov2@gmail.com", '_blank')
+      value: "nellebrowns0413@gmail.com",
+      action: () => window.open("mailto:nellebrowns0413@gmail.com", '_blank')
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Arizona, USA",
+      value: "Merced, CA",
       action: () => {}
     },
   ];
@@ -111,7 +111,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to build something amazing? Let's discuss your next project and turn your vision into a high-quality, scalable solution.
+            Interested in a senior full-stack developer with 10+ years of experience in Angular, .NET, and Python? 
+            Let’s discuss how I can contribute to your engineering team or technical leadership needs.
           </p>
         </motion.div>
 
@@ -126,7 +127,7 @@ export default function Contact() {
               <CardHeader>
                 <CardTitle className="font-display">Contact Information</CardTitle>
                 <p className="text-muted-foreground">
-                  Feel free to reach out through any of these channels.
+                  Reach out for senior engineering roles, technical leadership, or architecture consulting.
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -154,16 +155,15 @@ export default function Contact() {
                 })}
 
                 <div className="pt-6 border-t">
-                  <h3 className="font-semibold mb-4">Let's Connect</h3>
+                  <h3 className="font-semibold mb-4">Professional Focus</h3>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Looking for a skilled full-stack engineer to bring your vision to life? 
-                    I specialize in Python, .NET, Node.js, Angular, and React, creating scalable web and enterprise 
-                    applications with robust architectures and modern interfaces.
+                    I specialize in building secure, high-performance applications using:
                   </p>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <div>💻 Full-stack development expertise</div>
-                    <div>⏰ Quick response within 24 hours</div>
-                    <div>🌍 Available for remote work worldwide</div>
+                    <div>• Angular & .NET Core for enterprise web apps</div>
+                    <div>• Python/Django for data-intensive platforms</div>
+                    <div>• Azure cloud, Docker, and CI/CD pipelines</div>
+                    <div>• Technical leadership and mentoring</div>
                   </div>
                 </div>
               </CardContent>
@@ -180,7 +180,7 @@ export default function Contact() {
               <CardHeader>
                 <CardTitle className="font-display">Send a Message</CardTitle>
                 <p className="text-muted-foreground">
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  I’m currently open to senior full-stack and technical leadership opportunities.
                 </p>
               </CardHeader>
               <CardContent>
@@ -191,16 +191,16 @@ export default function Contact() {
                     className="text-center py-8"
                   >
                     <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                    <h3 className="text-xl font-semibold mb-2">Message Prepared!</h3>
                     <p className="text-muted-foreground mb-4">
-                      Thank you for reaching out. I'll get back to you soon.
+                      Your email draft has been opened. Please review and send it to complete your inquiry.
                     </p>
                     <Button
                       variant="outline"
                       onClick={() => setIsSubmitted(false)}
                       data-testid="button-send-another"
                     >
-                      Send Another Message
+                      Compose Another Message
                     </Button>
                   </motion.div>
                 ) : (
@@ -212,7 +212,7 @@ export default function Contact() {
                           id="name"
                           {...register("name")}
                           className={`mt-1 ${errors.name ? "border-destructive" : ""}`}
-                          placeholder="Your full name"
+                          placeholder="Your name"
                           data-testid="input-name"
                         />
                         {errors.name && (
@@ -248,7 +248,7 @@ export default function Contact() {
                         id="subject"
                         {...register("subject")}
                         className={`mt-1 ${errors.subject ? "border-destructive" : ""}`}
-                        placeholder="What's this about?"
+                        placeholder="e.g., Senior Developer Role"
                         data-testid="input-subject"
                       />
                       {errors.subject && (
@@ -265,7 +265,7 @@ export default function Contact() {
                         id="message"
                         {...register("message")}
                         className={`mt-1 min-h-32 ${errors.message ? "border-destructive" : ""}`}
-                        placeholder="Tell me about your project or just say hello..."
+                        placeholder="Tell me about your team, project, or opportunity..."
                         data-testid="textarea-message"
                       />
                       {errors.message && (
@@ -288,7 +288,7 @@ export default function Contact() {
                       {isSubmitting ? (
                         <>
                           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground mr-2" />
-                          Sending...
+                          Preparing Email...
                         </>
                       ) : (
                         <>
@@ -299,7 +299,7 @@ export default function Contact() {
                     </Button>
 
                     <p className="text-xs text-muted-foreground text-center">
-                      By sending this message, you agree that I may contact you regarding your inquiry.
+                      This form opens your email client. Your message is not sent automatically.
                     </p>
                   </form>
                 )}

@@ -22,17 +22,21 @@ export default function Education() {
   const education: EducationItem[] = [
     {
       id: "1",
-      institution: "Central Arizona College",
-      degree: "Bachelor of Computer Science",
-      field: "Software Engineering and Web Development",
-      location: "Arizona, United State",
-      startYear: "2016",
-      endYear: "2020",
+      institution: "California State University, Stanislaus",
+      degree: "Bachelor of Science in Computer Science",
+      field: "Software Development & Systems Architecture",
+      location: "Turlock, CA",
+      startYear: "2009",
+      endYear: "2013",
       description: [
-        "Built a solid foundation in software engineering and web development",
-        "Worked on projects involving Laravel, Vue.js, and modern web technologies",
-        "Focused on connecting frontend interfaces with strong, scalable backend systems",
-        "Developed practical coding skills, teamwork experience, and understanding of software architecture"
+        "Developed a strong foundation in algorithms, data structures, object-oriented programming, and software engineering principles.",
+        "Gained hands-on experience with C#, ASP.NET, SQL Server, and Python through coursework and projects.",
+        "Completed a software development internship at Stanislaus Tech Innovations, building internal tools with ASP.NET Web Forms and Python/Flask.",
+        "Applied Agile methodologies in team-based capstone projects focused on real-world problem solving."
+      ],
+      achievements: [
+        "Graduated with practical full-stack development experience",
+        "Secured full-time role post-internship based on academic and project performance"
       ]
     }
   ];
@@ -56,7 +60,7 @@ export default function Education() {
             Education
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Academic background and qualifications that laid the foundation for my full-stack engineering career.
+            Academic foundation that launched my 10+ year career in full-stack development, with early focus on .NET, C#, and Python.
           </p>
         </motion.div>
 
@@ -87,7 +91,7 @@ export default function Education() {
                     </div>
                     <Badge variant="secondary" className="w-fit">
                       <Calendar className="h-3 w-3 mr-1" />
-                      {edu.startYear} - {edu.endYear}
+                      {edu.startYear} – {edu.endYear}
                     </Badge>
                   </div>
                   

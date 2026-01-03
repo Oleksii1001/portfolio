@@ -31,133 +31,151 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
-    {
-      id: "1",
-      title: "KAMI Workforce - HR Management Platform",
-      description: "Innovative HR software built for the modern workforce, streamlining every people process with a powerful, fully integrated system.",
-      fullDescription: "KAMI delivers next-gen HR solutions that adapt to your business — combining enterprise-grade features, modular flexibility, and exceptional value for SMEs. Manage HR, payroll, attendance, and approvals anytime, anywhere with the mobile app. One platform, unlimited possibilities.",
-      technologies: ["Angular", "Node.js", "PostgreSQL", "React", "TypeScript", "Mobile Development"],
-      category: "enterprise",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
-      playStoreUrl: "https://ziphr.co/",
-      features: [
-        "All-in-one HR management system",
-        "Payroll and attendance tracking",
-        "Mobile app for anytime, anywhere access",
-        "Modular and customizable platform",
-        "Enterprise-grade security and compliance",
-        "Real-time analytics and reporting",
-        "Seamless integration with existing tools"
-      ],
-      stats: { downloads: "N/A", rating: "N/A" },
-      completedDate: "2024"
-    },
-    {
-      id: "2",
-      title: "ExaWizards Recruit Assistant Agent",
-      description: "AI-powered recruiting assistant that maximizes candidate engagement through personalized communication from application to offer acceptance.",
-      fullDescription: "exaBase Recruit Assistant is an AI agent that executes motivation through dialogue, from when candidates learn about the company until they accept an offer. Candidate questions are answered immediately, related information is delivered in conversational format, and communication content is standardized.",
-      technologies: ["Python", "AI/ML", "NLP", "React", "Node.js", "PostgreSQL"],
-      category: "ai",
-      image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=400&fit=crop",
-      playStoreUrl: "https://exawizards.com/exabase/recruit-assistant-agent/",
-      features: [
-        "AI-powered candidate communication",
-        "24/7 instant response to questions",
-        "Personalized information delivery",
-        "Standardized recruiting communication",
-        "Candidate engagement analytics",
-        "Data-driven recruitment optimization",
-        "Seamless integration with ATS systems"
-      ],
-      stats: { downloads: "N/A", rating: "N/A" },
-      completedDate: "2024"
-    },
-    {
-      id: "3",
-      title: "TopChrétien - Christian Community Platform",
-      description: "Leading French Christian platform providing daily inspiration, Bible study tools, formations, and community engagement for 500,000+ members.",
-      fullDescription: "TopChrétien is a comprehensive Christian community platform offering La Pensée du Jour (Thought of the Day), PassLeMot (Share the Word), TopBible with multiple translations, TopFormations for spiritual growth, and TopTV for live streaming. A platform for sharing God's love through quality resources and community encouragement.",
-      technologies: ["PHP", "Laravel", "Vue.js", "MySQL", "Video Streaming", "Mobile Apps"],
-      category: "community",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-      playStoreUrl: "https://www.topchretien.com/",
-      features: [
-        "Daily devotional content and Bible verses",
-        "Comprehensive Bible study tools",
-        "Live TV streaming and on-demand videos",
-        "Online formations and courses",
-        "Community engagement features",
-        "Multi-platform accessibility (web & mobile)",
-        "500,000+ active community members"
-      ],
-      stats: { downloads: "500K+", rating: "4.7" },
-      completedDate: "2023"
-    },
-    {
-      id: "4",
-      title: "Stanford Haptic Breathing Pacer Research",
-      description: "Innovative wearable device using haptic feedback to help individuals with autism and emotion dysregulation manage stress through breathing.",
-      fullDescription: "Developed at Stanford's Wehab Lab, this haptic breathing pacer (HBP) applies vibrations to synchronize breathing and reduce arousal in high-stress situations. Research shows promising efficacy for individuals with Autism Spectrum Disorder, using machine learning to personalize the approach for individual differences.",
-      technologies: ["Python", "Machine Learning", "IoT", "Wearable Tech", "Health APIs", "Data Analytics"],
-      category: "research",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-      playStoreUrl: "https://stanforddaily.com/2019/10/21/researchers-work-on-device-to-help-individuals-with-autism-handle-stress/",
-      features: [
-        "Haptic feedback for breathing synchronization",
-        "Machine learning personalization",
-        "Stress and affect regulation",
-        "Research-backed efficacy",
-        "Wearable technology integration",
-        "Data-driven insights",
-        "Focus on ASD population needs"
-      ],
-      stats: { downloads: "Research", rating: "N/A" },
-      completedDate: "2019"
-    },
-    {
-      id: "5",
-      title: "Quantum Mini-Apps for Engineering",
-      description: "Research on implementing variational quantum algorithms for solving the Poisson equation and engineering applications on non-fault-tolerant systems.",
-      fullDescription: "This work presents a case study in implementing variational quantum algorithms for solving partial differential equations commonly encountered in science and engineering. Highlights practical challenges in mapping algorithms to physical hardware and software engineering considerations for realistic results on today's quantum systems.",
-      technologies: ["Python", "Quantum Computing", "Qiskit", "Algorithm Design", "Scientific Computing"],
-      category: "research",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
-      playStoreUrl: "https://arxiv.org/abs/2411.12920",
-      features: [
-        "Variational quantum algorithms",
-        "Poisson equation solver implementation",
-        "Practical hardware mapping",
-        "Software engineering for quantum systems",
-        "Non-fault-tolerant system optimization",
-        "Engineering applications focus",
-        "Published research (IEEE)"
-      ],
-      stats: { downloads: "Research Paper", rating: "N/A" },
-      completedDate: "2024"
-    },
-    {
-      id: "6",
-      title: "GE Healthcare Solutions Integration",
-      description: "Contributed to enterprise healthcare solutions and digital transformation initiatives for improving patient care and clinical workflows.",
-      fullDescription: "Worked on healthcare technology solutions that support precision care and innovation in medical imaging, diagnostics, and patient monitoring systems. Focused on building integrated solutions for hospitals and healthcare providers to enhance efficiency and patient outcomes.",
-      technologies: [".NET", "C#", "Azure", "Healthcare APIs", "Microservices", "Enterprise Integration"],
-      category: "healthcare",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-      playStoreUrl: "https://www.gehealthcare.com/",
-      features: [
-        "Healthcare IT solutions integration",
-        "Medical imaging software development",
-        "Clinical workflow optimization",
-        "Cloud-based healthcare platforms",
-        "Patient monitoring systems",
-        "Enterprise-grade security compliance",
-        "Scalable microservices architecture"
-      ],
-      stats: { downloads: "Enterprise", rating: "N/A" },
-      completedDate: "2023"
-    }
-  ];
+  {
+    id: "1",
+    title: "Climate FieldView (AgriTech Reference)",
+    description: "Reference: Real-time farm data platform similar to my work at AgriTech Solutions Inc.",
+    fullDescription: "Climate FieldView delivers field-level insights using real-time sensor data, satellite imagery, and agronomic models—similar in scope and scale to the cloud-native telemetry platform I architected using Angular, .NET 7, and Python/Django for 200+ enterprise farms.",
+    technologies: ["Angular", ".NET 7", "Python", "Django", "Azure", "Real-time Telemetry"],
+    category: "enterprise",
+    image: "assets/fieldview_1.jpg",
+    playStoreUrl: "https://www.fieldview.com",
+    features: [
+      "Real-time agronomic insights",
+      "Sensor & equipment telemetry",
+      "Cloud-native SaaS architecture",
+      "Enterprise client focus"
+    ],
+    stats: { downloads: "200+ Enterprise Clients", rating: "60% Latency Reduction" },
+    completedDate: "2020–Present"
+  },
+  {
+    id: "2",
+    title: "Taranis (AgriTech Reference)",
+    description: "Reference: AI-powered crop monitoring platform similar to my telemetry dashboard work.",
+    fullDescription: "Taranis uses AI, aerial imagery, and real-time dashboards to monitor crop health at scale—reflecting the same technical challenges I solved in building a sub-second telemetry system processing 10,000+ events/hour with SignalR and WebSockets.",
+    technologies: ["React", "WebSockets", "AI/ML", "Cloud Infrastructure", "Real-time UI"],
+    category: "enterprise",
+    image: "assets/taranis_1.jpg",
+    playStoreUrl: "https://www.taranis.com",
+    features: [
+      "AI-driven field scouting",
+      "Real-time alerting",
+      "High-scale data visualization",
+      "Farmer & agronomist workflows"
+    ],
+    stats: { downloads: "10K+ Sensor Events/Hour", rating: "Sub-Second Response" },
+    completedDate: "2020–Present"
+  },
+  {
+    id: "3",
+    title: "Meddbase (Healthcare SaaS Reference)",
+    description: "Reference: Clinical management SaaS similar to my work at Central Valley Software Labs.",
+    fullDescription: "Meddbase provides secure, role-based clinical operations software with audit logging and compliance—directly comparable to the HIPAA-aligned healthcare logistics platform I built using React, .NET Core, PostgreSQL, and Redis.",
+    technologies: ["React", ".NET Core", "PostgreSQL", "RBAC", "JWT", "Audit Logging"],
+    category: "healthcare",
+    image: "assets/meddbase_1.jpg",
+    playStoreUrl: "https://www.meddbase.com",
+    features: [
+      "Role-based access control",
+      "Patient & workflow management",
+      "Regulated healthcare environment",
+      "High uptime & security"
+    ],
+    stats: { downloads: "10K+ Monthly Users", rating: "99.95% Uptime" },
+    completedDate: "2017–2020"
+  },
+  {
+    id: "4",
+    title: "Cortext (Healthcare Communication Reference)",
+    description: "Reference: Secure clinical messaging platform similar to my secure API work.",
+    fullDescription: "Cortext (by Imprivata) enables HIPAA-compliant clinical communication with audit trails—similar to the secure OAuth 2.0 and JWT systems I implemented for 10K+ users with 99.95% uptime.",
+    technologies: ["React", ".NET Core", "OAuth 2.0", "JWT", "Redis", "Azure"],
+    category: "healthcare",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    playStoreUrl: "https://www.cortext.com",
+    features: [
+      "Secure real-time messaging",
+      "Compliance & auditability",
+      "Scalable backend APIs",
+      "Healthcare-grade security"
+    ],
+    stats: { downloads: "Healthcare Providers", rating: "99.95% Uptime" },
+    completedDate: "2017–2020"
+  },
+  {
+    id: "5",
+    title: "CityGro (Legacy Modernization Reference)",
+    description: "Reference: Farm-to-retail SaaS similar to my legacy-to-React migration work.",
+    fullDescription: "CityGro modernized legacy supply chain tools into a responsive SaaS platform—mirroring my work refactoring ASP.NET MVC to React and automating workflows with Python, reducing bugs by 40%.",
+    technologies: ["React", "Python", "Flask", "Legacy Modernization", "Automation"],
+    category: "enterprise",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
+    playStoreUrl: "https://www.citygro.com",
+    features: [
+      "Legacy system modernization",
+      "B2B supply chain SaaS",
+      "Automated reporting",
+      "Operational efficiency gains"
+    ],
+    stats: { downloads: "Internal Operations", rating: "40% Bug Reduction" },
+    completedDate: "2014–2016"
+  },
+  {
+    id: "6",
+    title: "GoFarma (Pharmacy SaaS Reference)",
+    description: "Reference: Pharmacy management platform similar to my internal tool work.",
+    fullDescription: "GoFarma offers pharmacy ordering and management via modern web UIs over Python/Flask backends—similar to the internal automation and reporting pipelines I built to save 8+ hours/week.",
+    technologies: ["React", "Python", "Flask", "SQL", "Internal Tools"],
+    category: "enterprise",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    playStoreUrl: "https://www.gofarma.com",
+    features: [
+      "Internal workflow automation",
+      "Python-based reporting",
+      "B2B SaaS interface",
+      "Operational time savings"
+    ],
+    stats: { downloads: "Operational Teams", rating: "8+ Hours Saved/Week" },
+    completedDate: "2014–2016"
+  },
+  {
+    id: "7",
+    title: "FacilityBot (Internal Tools Reference)",
+    description: "Reference: Internal facility request tool similar to my internship work.",
+    fullDescription: "FacilityBot digitizes internal maintenance requests—similar to the ASP.NET Web Forms and Python/Flask internal tools I built during my internship at Stanislaus Tech Innovations.",
+    technologies: ["ASP.NET Web Forms", "C#", "Python", "Flask", "SQL Server"],
+    category: "enterprise",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    playStoreUrl: "https://www.facilitybot.com",
+    features: [
+      "Internal CRUD applications",
+      "Task & asset tracking",
+      "Lightweight automation",
+      "Agile feature delivery"
+    ],
+    stats: { downloads: "Internal Use", rating: "Full-Time Offer" },
+    completedDate: "2013"
+  },
+  {
+    id: "8",
+    title: "Flask Admin Examples (Internal Tool UI Reference)",
+    description: "Reference: Open-source internal dashboards similar to my Flask tooling.",
+    fullDescription: "This GitHub collection showcases Flask-based admin panels for internal tools—reflecting the type of lightweight, high-impact internal applications I built with Python/Flask during early roles.",
+    technologies: ["Python", "Flask", "Admin UI", "Internal Tools"],
+    category: "enterprise",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+    playStoreUrl: "https://github.com/tanrax/awesome-flask-admin",
+    features: [
+      "Admin dashboard patterns",
+      "Internal data management",
+      "Rapid prototyping",
+      "Developer productivity"
+    ],
+    stats: { downloads: "Open-Source Community", rating: "Dev Productivity Boost" },
+    completedDate: "2013"
+  }
+];
 
   const categories = [
     { id: "all", label: "All Projects" },

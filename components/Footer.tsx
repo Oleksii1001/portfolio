@@ -14,8 +14,8 @@ export default function Footer() {
 
   const handleSocialClick = (platform: string) => {
     const links = {
-      github: "https://github.com/Oleksii1001",
-      email: "mailto:oleksii.shamanov2@gmail.com"
+      github: "https://github.com/Oleksiiloo1",
+      email: "mailto:nellebrowns0413@gmail.com"
     };
     
     if (links[platform as keyof typeof links]) {
@@ -52,8 +52,8 @@ export default function Footer() {
                 David Partida
               </h3>
               <p className="text-muted-foreground text-sm mb-4">
-                Senior Full-Stack Engineer specializing in Python, .NET, Node.js, Angular, and React. 
-                Building scalable, secure, and high-performance web and enterprise applications.
+                Senior Full Stack Developer specializing in <strong>Angular, .NET Core, C#, Python, and Django</strong>. 
+                Building secure, high-performance web applications with 10+ years of experience.
               </p>
               
               {/* Social Links */}
@@ -114,10 +114,10 @@ export default function Footer() {
             >
               <h4 className="font-semibold mb-4">Get In Touch</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p>📧 oleksii.shamanov2@gmail.com</p>
-                <p>📍 Arizona, USA</p>
+                <p>📧 nellebrowns0413@gmail.com</p>
+                <p>📍 Merced, CA</p>
                 <p className="mt-4">
-                  Available for full-stack development projects.
+                  Open to senior full-stack roles and technical leadership opportunities.
                 </p>
               </div>
             </motion.div>

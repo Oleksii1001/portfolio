@@ -15,42 +15,73 @@ interface ExperienceItem {
   endDate: string;
   description: string[];
   technologies: string[];
-  logo?: string;
 }
 
 export default function Experience() {
   const experiences: ExperienceItem[] = [
     {
       id: "1",
-      company: "Railsware",
-      position: "Senior Full-Stack Developer",
-      location: "Arizona, USA",
-      startDate: "Jan 2022",
+      company: "AgriTech Solutions Inc",
+      position: "Senior Full Stack Developer",
+      location: "Merced, CA",
+      startDate: "Jan 2020",
       endDate: "Present",
       description: [
-        "Designed and developed scalable web and enterprise applications using Angular, React, .NET (C#), Python (Django), and Node.js",
-        "Built and maintained RESTful and GraphQL APIs, microservices, and complex backend systems",
-        "Optimized databases and implemented secure authentication and authorization systems",
-        "Led development teams, conducted code reviews, and mentored junior engineers",
-        "Delivered projects from architecture design to deployment on cloud platforms like AWS and Azure"
+        "Architected a cloud-native farm intelligence platform using Angular 16, .NET 7, and Python/Django serving 200+ enterprise clients.",
+        "Reduced telemetry data latency by 60% using SignalR and WebSockets for real-time dashboard updates.",
+        "Migrated monolithic .NET Framework app to Dockerized microservices on Azure, cutting cloud costs by 25%.",
+        "Implemented CI/CD with GitHub Actions and Infrastructure as Code (IaC), achieving 99.9% uptime.",
+        "Mentored 4 junior developers in Angular, C#, and cloud best practices."
       ],
-      technologies: ["Angular", "React", ".NET", "C#", "Python", "Django", "Node.js", "GraphQL", "AWS", "Azure", "Microservices"],
+      technologies: ["Angular", ".NET 7", "C#", "Python", "Django", "Azure", "Docker", "SignalR", "WebSockets", "GitHub Actions", "IaC"],
     },
     {
       id: "2",
-      company: "Edvantis",
-      position: "Front-End Developer / Full-Stack Engineer",
-      location: "Arizona, USA",
-      startDate: "Oct 2020",
-      endDate: "Dec 2023",
+      company: "Central Valley Software Labs",
+      position: "Full Stack Developer",
+      location: "Merced, CA",
+      startDate: "Jan 2017",
+      endDate: "Dec 2020",
       description: [
-        "Developed responsive and interactive web applications using Angular, React, and TypeScript",
-        "Integrated frontend interfaces with backend systems built on Node.js and Python (Django)",
-        "Collaborated with design and product teams to deliver high-quality UX/UI",
-        "Participated in Agile workflows, sprint planning, and timely project delivery",
-        "Assisted in modernizing legacy systems to contemporary full-stack architectures"
+        "Built a secure healthcare logistics SaaS using React, .NET Core, and PostgreSQL for 10K+ monthly users.",
+        "Implemented RBAC, JWT/OAuth 2.0, and comprehensive audit logging to meet HIPAA-aligned security standards.",
+        "Integrated Redis caching to achieve sub-200ms response times and 99.95% system uptime.",
+        "Drove test coverage from 35% to 80% using xUnit, Jest, and Cypress via TDD practices.",
+        "Containerized applications and deployed to Azure App Services using Docker."
       ],
-      technologies: ["Angular", "React", "TypeScript", "Node.js", "Python", "Django", "Agile", "UX/UI", "Legacy Migration"],
+      technologies: ["React", ".NET Core", "C#", "PostgreSQL", "Redis", "JWT", "OAuth 2.0", "Docker", "Azure", "xUnit", "Jest", "Cypress"],
+    },
+    {
+      id: "3",
+      company: "Merced Digital Systems",
+      position: "Software Developer",
+      location: "Merced, CA",
+      startDate: "Jan 2014",
+      endDate: "Dec 2016",
+      description: [
+        "Modernized legacy ASP.NET 2.0 MVC UIs to React, reducing UI-related bug reports by 40%.",
+        "Built Python (Pandas/Flask) automation pipelines to replace manual Excel reporting, saving 8+ hours/week.",
+        "Maintained and extended internal business applications using SQL Server and C#.",
+        "Collaborated with stakeholders to translate business requirements into technical solutions.",
+        "Improved code maintainability through modular architecture and documentation."
+      ],
+      technologies: ["React", "ASP.NET MVC", "C#", "Python", "Pandas", "Flask", "SQL Server", "JavaScript", "HTML/CSS"],
+    },
+    {
+      id: "4",
+      company: "Stanislaus Tech Innovations",
+      position: "Software Development Intern",
+      location: "Turlock, CA",
+      startDate: "Jan 2013",
+      endDate: "Dec 2013",
+      description: [
+        "Developed internal CRUD tools using ASP.NET Web Forms and SQL Server for task and data management.",
+        "Enhanced functionality with lightweight Python/Flask scripts for data validation and export.",
+        "Participated in Agile sprints, delivering 3–4 production features per cycle with consistent velocity.",
+        "Learned Git, CI/CD concepts, and professional software development workflows.",
+        "Received full-time offer based on performance and reliability."
+      ],
+      technologies: ["ASP.NET Web Forms", "C#", "SQL Server", "Python", "Flask", "Git", "Agile"],
     }
   ];
 
@@ -73,8 +104,7 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            My professional development journey as a Senior Full-Stack Engineer, building scalable web and enterprise 
-            applications and delivering exceptional solutions using modern technologies and best practices.
+            Over 10 years of experience building secure, high-performance applications across agriculture, healthcare, and enterprise domains-with a focus on Angular, .NET, Python, and cloud-native solutions.
           </p>
         </motion.div>
 
@@ -108,7 +138,7 @@ export default function Experience() {
                           </h3>
                         </div>
                         <Badge variant="secondary" className="w-fit">
-                          {experience.startDate} - {experience.endDate}
+                          {experience.startDate} – {experience.endDate}
                         </Badge>
                       </div>
                       
@@ -138,7 +168,7 @@ export default function Experience() {
                             key={tech}
                             variant="outline"
                             className="text-xs hover-elevate"
-                            data-testid={`badge-tech-${tech.toLowerCase()}`}
+                            data-testid={`badge-tech-${tech.toLowerCase().replace(/\s+/g, '-')}`}
                           >
                             {tech}
                           </Badge>
