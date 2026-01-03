@@ -275,7 +275,7 @@ export default function Projects() {
                       data-testid={`button-playstore-${project.id}`}
                     >
                       <Play className="h-4 w-4 mr-1" />
-                      Play Store
+                      Play on Website
                     </Button>
                   </div>
                 </div>
@@ -402,7 +402,7 @@ export default function Projects() {
                             data-testid={`button-modal-playstore-${project.id}`}
                           >
                             <ExternalLink className="h-4 w-4 mr-2" />
-                            View on Play Store
+                            View on Website
                           </Button>
                         </div>
                       </DialogContent>

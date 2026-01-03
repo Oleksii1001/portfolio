@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
+      <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
         <TooltipProvider>
           {children}
           <Toaster />
